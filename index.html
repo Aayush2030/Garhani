@@ -3,122 +3,225 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mera village Garhani</title>
+  <title>Garhani Village Website</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
       background: #f9f9f9;
       color: #333;
     }
     header {
-      background: linear-gradient(135deg, #4CAF50, #2E7D32);
-      color: #fff;
-      padding: 40px 20px;
+      background: url('village.jpg') no-repeat center center/cover;
+      color: white;
       text-align: center;
+      padding: 80px 20px;
     }
     header h1 {
+      font-size: 3em;
       margin: 0;
-      font-size: 2.5em;
     }
     header p {
-      margin: 10px 0 0;
       font-size: 1.2em;
     }
-    nav {
-      background: #333;
-      display: flex;
-      justify-content: center;
-      padding: 10px;
+    #typing {
+      font-size: 1.5em;
+      margin-top: 20px;
+      white-space: nowrap;
+      border-right: 2px solid;
+      width: fit-content;
+      animation: blink 0.7s infinite;
     }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-    nav a:hover {
-      color: #4CAF50;
+    @keyframes blink {
+      50% { border-color: transparent; }
     }
     section {
       padding: 40px 20px;
-      max-width: 1000px;
+      max-width: 900px;
       margin: auto;
     }
     h2 {
-      margin-bottom: 20px;
-      color: #2E7D32;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
     }
-    .project {
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #0077cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    .popup {
+      display: none;
       background: #fff;
+      border: 2px solid #0077cc;
       padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .project h3 {
-      margin-top: 0;
+      margin-top: 20px;
     }
     footer {
       background: #333;
-      color: #fff;
+      color: white;
       text-align: center;
-      padding: 15px;
-      margin-top: 30px;
-    }
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2em;
-      }
-      nav {
-        flex-direction: column;
-      }
-      nav a {
-        margin: 10px 0;
-      }
+      padding: 20px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Aayu from bihar</h1>
-    <p>Web Developer | Designer | Learner</p>
-  </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<header>
+  <h1>Garhani – Our Village</h1>
+  <p>Culture, Tradition, and Development</p>
+  <div id="typing"></div>
+</header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Namaste! Main ek web developer hoon jo modern websites banata hoon using your love aur support. Mujhe web devlope krna aur mera Kum asand hai.</p>
-  </section>
+<section id="about-aayu">
+  <h2>About Aayu</h2>
+  <p>I am Aayu, a web developer and son of Garhani. My vision is to bring our village’s culture and identity into the digital world.</p>
+</section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Portfolio Website</h3>
-      <p>Hi i am aayu form bihar bhojpur garhani.</p>
-      <a href="https://github.com/username/portfolio">View Project</a>
-    </div>
-    <div class="project">
-      <h3>Blog Platform</h3>
-      <p>Bihar is alway in top in india ok now come back.</p>
-      <a href="https://github.com/username/blog">View Project</a>
-    </div>
-  </section>
+<section id="about-garhani">
+  <h2>About Garhani</h2>
+  <p>Garhani is rich in history, traditions, and community spirit. This section will showcase maps, photos, and stories of our village.</p>
+</section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: earningsaayu@gmaili.com</p>
-    <p>GitHub: <a href="https://github.com/username">github.com/username</a></p>
-  </section>
+<section id="culture">
+  <h2>Culture & Traditions</h2>
+  <p>Festivals, fairs, folk songs, and dances will be highlighted here with photos and videos.</p>
+</section>
 
-  <footer>
-    <p>&copy; 2026 AAYU FROM BIHAR BIHAR ME KUCHH BHI HO SKTA HAI.</p>
-  </footer>
-</body>
-  </html>
+<section id="community">
+  <h2>Community</h2>
+  <p>Profiles of teachers, doctors, farmers, and inspiring youth from Garhani.</p>
+  <a href="#" class="button" onclick="togglePopup()">Village Mukhiya / Ward Members</a>
+  <div id="popup" class="popup">
+    <h3>Mukhiya & Ward Members</h3>
+    <p><strong>Mukhiya:</strong> [Name Here]</p>
+    <p><strong>Ward 1:</strong> [Member Name]</p>
+    <p><strong>Ward 2:</strong> [Member Name]</p>
+    <!-- Add more wards as needed -->
+  </div>
+</section>
+
+<section id="services">
+  <h2>Services & Facilities</h2>
+  <p>Information about schools, hospitals, temples, and Panchayat Bhawan with contact details.</p>
+</section>
+
+<section id="news">
+  <h2>News & Updates</h2>
+  <p>Village events, Panchayat meetings, and social activities will be posted here.</p>
+</section>
+
+<section id="agriculture">
+  <h2>Agriculture</h2>
+  <p>Latest farming techniques, weather updates, and government schemes for farmers.</p>
+</section>
+
+<section id="education">
+  <h2>Education Hub</h2>
+  <p>E-learning materials and resources for children and youth.</p>
+</section>
+
+<section id="health">
+  <h2>Health Information</h2>
+  <p>Details of doctors, medicines, and health camps in Garhani.</p>
+</section>
+
+<section id="future">
+  <h2>Future Development Plans</h2>
+  <ul>
+    <li>Solar street lights</li>
+    <li>Digital library</li>
+    <li>Free Wi-Fi zones</li>
+    <li>E-Governance with online Panchayat services</li>
+  </ul>
+</section>
+
+<section id="feedback">
+  <h2>Feedback & Suggestions</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required><br><br>
+    <input type="email" placeholder="Your Email" required><br><br>
+    <textarea placeholder="Your Suggestion" required></textarea><br><br>
+    <button type="submit">Submit</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Garhani | Designed by Aayu<br><br>
+    <input type="email" placeholder="Your Email" required></p>
+</footer>
+
+<script>
+  const<br><br>
+    <textarea placeholder="Your Suggestion" required></textarea><br><br> lines = [
+    "I am Aayu...",
+   
+    <button type="submit">Submit</button>
+ "A web developer  </form>
+</section> and son of Garhani...",
+    "My dream
+
+<footer>
+  <p> is to connect my© 2026 Garhani | Designed by Aayu village to the digital world...",
+    "</p>
+</footer>
+
+<script>
+  constI want to showcase our culture and lines = [
+    "I am Aayu...",
+    traditions online...",
+    "I wish "A web developer and son of Garhani to create new opportunities for the youth...",
+...",
+    "My dream is to connect my    "In the future, I see Garhani as village to the digital world...",
+    " a smart village...",
+    "EducationI want to showcase, healthcare, and our culture and traditions online technology reaching everyone...",
+   ...",
+    "I wish to create new opportunities "Together, we will build a brighter for the youth...",
+ tomorrow..."
+  ];
+  let index = 0;
+  let charIndex = 0;
+  const typingDiv = document.getElementById("typing");
+
+  function typeLine() {
+    if (charIndex < lines[index].length) {
+      typingDiv.text    "In the futureContent += lines[index].charAt(char, I see Garhani asIndex);
+      char a smart village...",
+    "EducationIndex++;
+      set, healthcare, andTimeout(typeLine technology reaching, 100);
+    } else everyone...",
+    {
+      setTimeout(() => {
+        "Together, we will build a brighter typingDiv.textContent tomorrow..."
+  ];
+ = "";
+        index  let index = 0;
+ = (index + 1) %  let charIndex = lines.length;
+        charIndex = 0;
+ 0;
+  const typingDiv = document.get        typeLine();
+      }, 200ElementById("typing");
+
+  function type0);
+    }
+  }
+  typeLine();
+
+  functionLine() {
+    if ( togglePopup() {
+charIndex < lines[index].length) {
+      typingDiv.text    const popup =Content += lines document.getElementById("popup");
+   [index].charAt(char popup.style.displayIndex);
+      charIndex++;
+      set = popup.style.displayTimeout(typeLine === "block" ? "none" : "block";
+, 100);
+    } else {
+      setTimeout  }
+</script>
+
+</body>(() => {
+       
+</html>
